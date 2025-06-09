@@ -1,0 +1,29 @@
+# Log Analysis Configuration
+
+# Log Sources
+log_sources:
+  ssh:
+    path: "/var/log/auth.log" # Default SSH log location for Linux
+    pattern: "sshd" # Pattern to identify SSH-related logs
+
+# Analysis Settings
+analysis:
+  ip_threshold: 5 # Number of failed attempts before flagging an IP
+  time_window: 300 # Time window in seconds for analyzing attempts
+  patterns:
+    - "Failed password"
+    - "Invalid user"
+    - "Connection closed"
+    - "Did not receive identification"
+
+# NIST NVD API Configuration
+nvd:
+  api_key: "5cd72262-35fb-417f-82f3-c0db16029026"
+  base_url: "https://services.nvd.nist.gov/rest/json/cves/2.0"
+  request_delay: 6 # Delay between API requests in seconds
+
+# Output Settings
+output:
+  report_dir: "reports"
+  log_level: "INFO"
+  report_format: "json" # Options: json, csv, txt

@@ -1,0 +1,412 @@
+{
+  "timestamp": "2025-05-04T23:21:30.609849",
+  "analysis_results": {
+    "ip_analysis": {
+      "suspicious_ips": [
+        {
+          "ip": "192.168.1.100",
+          "attempt_count": 4,
+          "first_attempt": "2025-01-01T10:00:00",
+          "last_attempt": "2025-01-01T10:00:06",
+          "usernames_tried": [
+            "root"
+          ]
+        },
+        {
+          "ip": "10.0.0.1",
+          "attempt_count": 3,
+          "first_attempt": "2025-01-01T10:00:03",
+          "last_attempt": "2025-01-01T10:00:07",
+          "usernames_tried": [
+            "admin"
+          ]
+        },
+        {
+          "ip": "192.168.1.1",
+          "attempt_count": 3,
+          "first_attempt": "2025-01-20T03:25:36",
+          "last_attempt": "2025-01-20T03:25:40",
+          "usernames_tried": [
+            "admin",
+            "root"
+          ]
+        },
+        {
+          "ip": "192.168.1.6",
+          "attempt_count": 5,
+          "first_attempt": "2025-01-20T03:26:15",
+          "last_attempt": "2025-01-20T03:26:23",
+          "usernames_tried": []
+        }
+      ],
+      "total_ips": 8,
+      "total_suspicious": 4
+    },
+    "pattern_matches": {
+      "matches": {
+        "Failed password": [
+          {
+            "timestamp": "2025-01-01T10:00:00",
+            "source_ip": "192.168.1.100",
+            "message": "Jan 1 10:00:00 server sshd[1234]: Failed password for root from 192.168.1.100 port 12345 ssh2"
+          },
+          {
+            "timestamp": "2025-01-01T10:00:01",
+            "source_ip": "192.168.1.100",
+            "message": "Jan 1 10:00:01 server sshd[1234]: Failed password for root from 192.168.1.100 port 12345 ssh2"
+          },
+          {
+            "timestamp": "2025-01-01T10:00:02",
+            "source_ip": "192.168.1.100",
+            "message": "Jan 1 10:00:02 server sshd[1234]: Failed password for root from 192.168.1.100 port 12345 ssh2"
+          },
+          {
+            "timestamp": "2025-01-01T10:00:04",
+            "source_ip": "10.0.0.1",
+            "message": "Jan 1 10:00:04 server sshd[1234]: Failed password for invalid user admin from 10.0.0.1 port 54321 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:36",
+            "source_ip": "192.168.1.1",
+            "message": "Jan 20 03:25:36 testhost sshd[12345]: Failed password for invalid user admin from 192.168.1.1 port 39654 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:38",
+            "source_ip": "192.168.1.1",
+            "message": "Jan 20 03:25:38 testhost sshd[12345]: Failed password for invalid user admin from 192.168.1.1 port 39655 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:40",
+            "source_ip": "192.168.1.1",
+            "message": "Jan 20 03:25:40 testhost sshd[12345]: Failed password for invalid user root from 192.168.1.1 port 39656 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:44",
+            "source_ip": "192.168.1.2",
+            "message": "Jan 20 03:25:44 testhost sshd[12346]: Failed password for invalid user test from 192.168.1.2 port 39657 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:26:15",
+            "source_ip": "192.168.1.6",
+            "message": "Jan 20 03:26:15 testhost sshd[12350]: Failed password for valid user john from 192.168.1.6 port 39660 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:26:17",
+            "source_ip": "192.168.1.6",
+            "message": "Jan 20 03:26:17 testhost sshd[12350]: Failed password for valid user john from 192.168.1.6 port 39661 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:26:19",
+            "source_ip": "192.168.1.6",
+            "message": "Jan 20 03:26:19 testhost sshd[12350]: Failed password for valid user john from 192.168.1.6 port 39662 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:26:21",
+            "source_ip": "192.168.1.6",
+            "message": "Jan 20 03:26:21 testhost sshd[12350]: Failed password for valid user john from 192.168.1.6 port 39663 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:26:23",
+            "source_ip": "192.168.1.6",
+            "message": "Jan 20 03:26:23 testhost sshd[12350]: Failed password for valid user john from 192.168.1.6 port 39664 ssh2"
+          }
+        ],
+        "Invalid user": [
+          {
+            "timestamp": "2025-01-01T10:00:03",
+            "source_ip": "10.0.0.1",
+            "message": "Jan 1 10:00:03 server sshd[1234]: Invalid user admin from 10.0.0.1 port 54321 ssh2"
+          },
+          {
+            "timestamp": "2025-01-01T10:00:04",
+            "source_ip": "10.0.0.1",
+            "message": "Jan 1 10:00:04 server sshd[1234]: Failed password for invalid user admin from 10.0.0.1 port 54321 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:36",
+            "source_ip": "192.168.1.1",
+            "message": "Jan 20 03:25:36 testhost sshd[12345]: Failed password for invalid user admin from 192.168.1.1 port 39654 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:38",
+            "source_ip": "192.168.1.1",
+            "message": "Jan 20 03:25:38 testhost sshd[12345]: Failed password for invalid user admin from 192.168.1.1 port 39655 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:40",
+            "source_ip": "192.168.1.1",
+            "message": "Jan 20 03:25:40 testhost sshd[12345]: Failed password for invalid user root from 192.168.1.1 port 39656 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:42",
+            "source_ip": "192.168.1.2",
+            "message": "Jan 20 03:25:42 testhost sshd[12346]: Invalid user test from 192.168.1.2"
+          },
+          {
+            "timestamp": "2025-01-20T03:25:44",
+            "source_ip": "192.168.1.2",
+            "message": "Jan 20 03:25:44 testhost sshd[12346]: Failed password for invalid user test from 192.168.1.2 port 39657 ssh2"
+          }
+        ],
+        "Accepted password": [
+          {
+            "timestamp": "2025-01-01T10:00:05",
+            "source_ip": "192.168.1.200",
+            "message": "Jan 1 10:00:05 server sshd[1234]: Accepted password for user1 from 192.168.1.200 port 23456 ssh2"
+          },
+          {
+            "timestamp": "2025-01-20T03:26:01",
+            "source_ip": "192.168.1.3",
+            "message": "Jan 20 03:26:01 testhost sshd[12347]: Accepted password for validuser from 192.168.1.3 port 39658 ssh2"
+          }
+        ],
+        "Connection closed": [
+          {
+            "timestamp": "2025-01-01T10:00:06",
+            "source_ip": "192.168.1.100",
+            "message": "Jan 1 10:00:06 server sshd[1234]: Connection closed by 192.168.1.100 port 12345 [preauth]"
+          },
+          {
+            "timestamp": "2025-01-01T10:00:07",
+            "source_ip": "10.0.0.1",
+            "message": "Jan 1 10:00:07 server sshd[1234]: Connection closed by 10.0.0.1 port 54321 [preauth]"
+          },
+          {
+            "timestamp": "2025-01-20T03:26:05",
+            "source_ip": "192.168.1.4",
+            "message": "Jan 20 03:26:05 testhost sshd[12348]: Connection closed by 192.168.1.4 port 39659"
+          }
+        ]
+      },
+      "match_counts": {
+        "Failed password": 13,
+        "Invalid user": 7,
+        "Accepted password": 2,
+        "Connection closed": 3
+      }
+    },
+    "user_analysis": {
+      "root": {
+        "attempts": 4,
+        "unique_ips": [
+          "192.168.1.100",
+          "192.168.1.1"
+        ],
+        "successful_logins": 0
+      },
+      "admin": {
+        "attempts": 3,
+        "unique_ips": [
+          "192.168.1.1",
+          "10.0.0.1"
+        ],
+        "successful_logins": 0
+      },
+      "user1": {
+        "attempts": 1,
+        "unique_ips": [
+          "192.168.1.200"
+        ],
+        "successful_logins": 1
+      },
+      "test": {
+        "attempts": 1,
+        "unique_ips": [
+          "192.168.1.2"
+        ],
+        "successful_logins": 0
+      },
+      "validuser": {
+        "attempts": 1,
+        "unique_ips": [
+          "192.168.1.3"
+        ],
+        "successful_logins": 1
+      }
+    },
+    "summary": {
+      "total_suspicious_ips": 4,
+      "total_pattern_matches": 25,
+      "unique_usernames": 5,
+      "timestamp": "2025-05-04T23:21:30.609216",
+      "risk_level": "MEDIUM"
+    }
+  },
+  "vulnerability_map": {
+    "ip_vulnerabilities": {
+      "192.168.1.100": {
+        "potential_vulnerabilities": [
+          {
+            "id": "CVE-2023-38408",
+            "description": "OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting",
+            "severity": "HIGH",
+            "published": "2023-07-19T00:00:00",
+            "references": [
+              "https://nvd.nist.gov/vuln/detail/CVE-2023-38408",
+              "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408"
+            ],
+            "mitigation": "Update OpenSSH to version 9.3p2 or later and implement rate limiting",
+            "attack_vector": "Network",
+            "impact": {
+              "confidentiality": "HIGH",
+              "integrity": "HIGH",
+              "availability": "MEDIUM"
+            }
+          }
+        ],
+        "attack_pattern": "Potential brute force attempt",
+        "risk_level": "HIGH"
+      },
+      "10.0.0.1": {
+        "potential_vulnerabilities": [
+          {
+            "id": "CVE-2023-38408",
+            "description": "OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting",
+            "severity": "HIGH",
+            "published": "2023-07-19T00:00:00",
+            "references": [
+              "https://nvd.nist.gov/vuln/detail/CVE-2023-38408",
+              "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408"
+            ],
+            "mitigation": "Update OpenSSH to version 9.3p2 or later and implement rate limiting",
+            "attack_vector": "Network",
+            "impact": {
+              "confidentiality": "HIGH",
+              "integrity": "HIGH",
+              "availability": "MEDIUM"
+            }
+          }
+        ],
+        "attack_pattern": "Potential brute force attempt",
+        "risk_level": "HIGH"
+      },
+      "192.168.1.1": {
+        "potential_vulnerabilities": [
+          {
+            "id": "CVE-2023-38408",
+            "description": "OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting",
+            "severity": "HIGH",
+            "published": "2023-07-19T00:00:00",
+            "references": [
+              "https://nvd.nist.gov/vuln/detail/CVE-2023-38408",
+              "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408"
+            ],
+            "mitigation": "Update OpenSSH to version 9.3p2 or later and implement rate limiting",
+            "attack_vector": "Network",
+            "impact": {
+              "confidentiality": "HIGH",
+              "integrity": "HIGH",
+              "availability": "MEDIUM"
+            }
+          }
+        ],
+        "attack_pattern": "Potential brute force attempt",
+        "risk_level": "HIGH"
+      },
+      "192.168.1.6": {
+        "potential_vulnerabilities": [
+          {
+            "id": "CVE-2023-38408",
+            "description": "OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting",
+            "severity": "HIGH",
+            "published": "2023-07-19T00:00:00",
+            "references": [
+              "https://nvd.nist.gov/vuln/detail/CVE-2023-38408",
+              "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38408"
+            ],
+            "mitigation": "Update OpenSSH to version 9.3p2 or later and implement rate limiting",
+            "attack_vector": "Network",
+            "impact": {
+              "confidentiality": "HIGH",
+              "integrity": "HIGH",
+              "availability": "MEDIUM"
+            }
+          }
+        ],
+        "attack_pattern": "Potential brute force attempt",
+        "risk_level": "HIGH"
+      }
+    },
+    "pattern_vulnerabilities": {
+      "Failed password": [
+        {
+          "id": "CVE-2023-28531",
+          "description": "OpenSSH before 9.3p2 allows remote attackers to bypass authentication via timing attack",
+          "severity": "MEDIUM",
+          "published": "2023-04-19T00:00:00",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-28531",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-28531"
+          ],
+          "mitigation": "Update OpenSSH to version 9.3p2 or later and implement standardized response times",
+          "attack_vector": "Network",
+          "impact": {
+            "confidentiality": "MEDIUM",
+            "integrity": "MEDIUM",
+            "availability": "LOW"
+          }
+        }
+      ],
+      "Invalid user": [
+        {
+          "id": "CVE-2023-48795",
+          "description": "OpenSSH before 9.6p1 allows remote attackers to conduct user enumeration attacks",
+          "severity": "MEDIUM",
+          "published": "2023-12-18T00:00:00",
+          "references": [
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-48795",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-48795"
+          ],
+          "mitigation": "Update OpenSSH to version 9.6p1 or later and implement user enumeration protection",
+          "attack_vector": "Network",
+          "impact": {
+            "confidentiality": "MEDIUM",
+            "integrity": "LOW",
+            "availability": "LOW"
+          }
+        }
+      ]
+    },
+    "summary": {
+      "total_vulnerabilities": 6,
+      "severity_distribution": {
+        "CRITICAL": 0,
+        "HIGH": 4,
+        "MEDIUM": 2,
+        "LOW": 0
+      },
+      "cve_references": {
+        "total_cves": 6,
+        "by_severity": {
+          "HIGH": [
+            "CVE-2023-38408"
+          ],
+          "MEDIUM": [
+            "CVE-2023-28531",
+            "CVE-2023-48795"
+          ],
+          "LOW": []
+        }
+      },
+      "timestamp": "2025-05-04T23:21:30.609527",
+      "overall_risk_level": "HIGH"
+    }
+  },
+  "recommendations": [
+    {
+      "category": "General",
+      "recommendation": "Regularly monitor and analyze system logs for suspicious activities",
+      "priority": "HIGH"
+    },
+    {
+      "category": "Access Control",
+      "recommendation": "Consider blocking 4 suspicious IPs showing brute force patterns",
+      "priority": "HIGH"
+    },
+    {
+      "category": "Authentication",
+      "recommendation": "Implement stronger password policies and consider rate limiting login attempts",
+      "priority": "HIGH"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+type,identifier,risk_level,cve_id,description,severity,attack_pattern
+IP,192.168.1.100,HIGH,CVE-2023-38408,OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting,HIGH,Potential brute force attempt
+IP,10.0.0.1,HIGH,CVE-2023-38408,OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting,HIGH,Potential brute force attempt
+IP,192.168.1.1,HIGH,CVE-2023-38408,OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting,HIGH,Potential brute force attempt
+IP,192.168.1.6,HIGH,CVE-2023-38408,OpenSSH before 9.3p2 allows remote attackers to conduct brute force attacks due to insufficient rate limiting,HIGH,Potential brute force attempt
+Pattern,Failed password,MEDIUM,CVE-2023-28531,OpenSSH before 9.3p2 allows remote attackers to bypass authentication via timing attack,MEDIUM,Failed password
+Pattern,Invalid user,MEDIUM,CVE-2023-48795,OpenSSH before 9.6p1 allows remote attackers to conduct user enumeration attacks,MEDIUM,Invalid user

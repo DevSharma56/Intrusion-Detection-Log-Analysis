@@ -1,0 +1,29 @@
+# Test Configuration
+
+# Log Sources
+log_sources:
+  ssh:
+    path: "tests/data/sample_auth.log"
+    pattern: "sshd"
+
+# Analysis Settings
+analysis:
+  ip_threshold: 3
+  time_window: 300
+  patterns:
+    - "Failed password"
+    - "Invalid user"
+    - "Connection closed"
+    - "Did not receive identification"
+
+# NIST NVD API Configuration
+nvd:
+  api_key: "test-api-key"
+  base_url: "https://services.nvd.nist.gov/rest/json/cves/2.0"
+  request_delay: 1 # Shorter delay for testing
+
+# Output Settings
+output:
+  report_dir: "tests/data/reports"
+  log_level: "INFO"
+  report_format: "json"

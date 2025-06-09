@@ -1,0 +1,42 @@
+# Log Analysis Configuration
+
+# Log Sources
+log_sources:
+  ssh:
+    path: "tests/data/sample_auth.log" # Using absolute path
+    pattern: ".*" # Match all lines
+    patterns:
+      - "Failed password"
+      - "Invalid user"
+      - "Accepted password"
+      - "Connection closed"
+
+# Analysis Settings
+analysis:
+  ip_threshold: 3 # Number of failed attempts within time_window to consider suspicious
+  suspicious_ips:
+    - 192.168.1.100
+    - 10.0.0.1
+  suspicious_users:
+    - root
+    - admin
+  time_window: 3600 # 1 hour in seconds
+  patterns:
+    - "Failed password"
+    - "Invalid user"
+    - "Accepted password"
+    - "Connection closed"
+
+# NIST NVD API Configuration
+nvd:
+  api_key: "" # Leave empty for testing
+  base_url: "https://services.nvd.nist.gov/rest/json/2.0" # Updated NVD API v2.0 base URL
+  request_delay: 1 # Delay between API requests in seconds
+  cache_duration: 3600 # 1 hour in seconds
+  test_mode: true # Enable test mode when no API key is provided
+
+# Output Settings
+output:
+  report_format: JSON
+  log_level: INFO
+  report_dir: reports
